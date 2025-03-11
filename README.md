@@ -1,36 +1,87 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Next.js 15 & React 18 Boilerplate with FSD
+
+Modern web application boilerplate built with Next.js 15 and React 18, implementing Feature-Sliced Design (FSD) architecture for scalable and maintainable development.
+
+## Tech Stack
+
+- **Framework:** Next.js 15.2.1
+- **Language:** TypeScript
+- **UI Library:** React 18.3
+- **Architecture:** Feature-Sliced Design (FSD)
+- **Linting:** ESLint
+
+## Project Structure
+
+The project follows Feature-Sliced Design methodology with the following structure:
+
+```
+src/
+├── app/          # Application initialization layer
+├── pages/        # Pages/Routing layer
+├── widgets/      # Composite components layer
+├── features/     # User interactions layer
+├── entities/     # Business entities layer
+└── shared/       # Reusable infrastructure layer
+    ├── api/      # API integration
+    ├── config/   # Configuration
+    ├── lib/      # Libraries
+    └── ui/       # UI components
+```
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
+
+- Node.js 18.0 or later
+- npm 9.0 or later
+
+### Installation
+
+1. Clone the repository
+
+```bash
+git clone [repository-url]
+cd [repository-name]
+```
+
+2. Install dependencies
+
+```bash
+npm install
+```
+
+3. Run the development server
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Available Scripts
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- `npm run dev` - Runs the development server with Turbopack
+- `npm run build` - Creates a production build
+- `npm start` - Starts the production server
+- `npm run lint` - Runs ESLint for code linting
 
-## Learn More
+## Project Features
 
-To learn more about Next.js, take a look at the following resources:
+- 🚀 Next.js 15 with App Router
+- 📝 TypeScript for type safety
+- 🏗️ Feature-Sliced Design architecture
+- 🔍 ESLint for code linting
+- 🔄 Fast Refresh for quick iterations
+- 🛠️ Turbopack for faster development
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Contributing
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+1. Fork the project
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
 
-## Deploy on Vercel
+## License
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+This project is licensed under the MIT License - see the LICENSE file for details
