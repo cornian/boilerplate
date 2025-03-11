@@ -16,16 +16,18 @@ The project follows Feature-Sliced Design methodology with the following structu
 
 ```
 src/
-├── app/          # Application initialization layer
-├── pages/        # Pages/Routing layer
-├── widgets/      # Composite components layer
-├── features/     # User interactions layer
-├── entities/     # Business entities layer
-└── shared/       # Reusable infrastructure layer
-    ├── api/      # API integration
-    ├── config/   # Configuration
-    ├── lib/      # Libraries
-    └── ui/       # UI components
+├── app/                  # Application initialization layer
+├── entities/            # Business entities layer
+├── features/            # User interactions layer
+├── pages/               # Pages/Routing layer
+├── widgets/             # Composite components layer
+└── shared/              # Reusable infrastructure layer
+    ├── api/            # API integration
+    ├── config/         # Configuration
+    ├── constants/      # Global constants
+    ├── lib/            # Utility functions
+    ├── types/          # TypeScript types
+    └── ui/             # UI components
 ```
 
 ## Getting Started
