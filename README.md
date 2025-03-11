@@ -1,6 +1,6 @@
 # Next.js 15 & React 18 Boilerplate with FSD
 
-Modern web application boilerplate built with Next.js 15 and React 18, implementing Feature-Sliced Design (FSD) architecture for scalable and maintainable development.
+Next.js 15와 Feature-Sliced Design 아키텍처를 기반으로 한 보일러플레이트 프로젝트입니다.
 
 ## Tech Stack
 
@@ -8,6 +8,9 @@ Modern web application boilerplate built with Next.js 15 and React 18, implement
 - **Language:** TypeScript
 - **UI Library:** React 18.3
 - **Architecture:** Feature-Sliced Design (FSD)
+- **Styling:** Styled Components
+- **State Management:** Zustand
+- **Animation:** Framer Motion
 - **Linting:** ESLint
 
 ## Project Structure
@@ -16,19 +19,61 @@ The project follows Feature-Sliced Design methodology with the following structu
 
 ```
 src/
-├── app/                  # Application initialization layer
-├── entities/            # Business entities layer
-├── features/            # User interactions layer
-├── pages/               # Pages/Routing layer
-├── widgets/             # Composite components layer
-└── shared/              # Reusable infrastructure layer
-    ├── api/            # API integration
-    ├── config/         # Configuration
-    ├── constants/      # Global constants
-    ├── lib/            # Utility functions
-    ├── types/          # TypeScript types
-    └── ui/             # UI components
+├── app/                  # 애플리케이션 초기화 레이어
+│   ├── providers/       # 전역 프로바이더 (Theme, Store 등)
+│   └── layout.tsx       # 루트 레이아웃
+│
+├── entities/            # 비즈니스 엔티티 레이어
+│   └── [entity]/       # 개별 비즈니스 엔티티 (User, Product 등)
+│
+├── features/            # 사용자 상호작용 레이어
+│   └── [feature]/      # 개별 기능 구현
+│
+├── widgets/            # 복합 컴포넌트 레이어
+│   ├── modal/         # 모달 관련 위젯
+│   └── toast/         # 토스트 관련 위젯
+│
+└── shared/            # 재사용 가능한 인프라 레이어
+    ├── api/          # API 통합 (API 클라이언트, 요청 함수 등)
+    ├── config/       # 설정 (테마, 환경 변수 등)
+    ├── constants/    # 전역 상수
+    ├── lib/          # 유틸리티 함수 및 훅
+    ├── store/        # 전역 상태 관리
+    ├── styles/       # 전역 스타일
+    └── ui/          # UI 컴포넌트
 ```
+
+## 레이어 설명
+
+### 📱 app
+
+- 애플리케이션의 진입점
+- 전역 프로바이더 및 설정
+- 페이지 레이아웃 관리
+
+### 🎯 entities
+
+- 비즈니스 로직의 핵심 엔티티
+- 도메인 모델 및 관련 로직
+- 독립적인 비즈니스 객체
+
+### ⚡ features
+
+- 사용자 상호작용 기능
+- 특정 비즈니스 요구사항 구현
+- 하나 이상의 엔티티를 사용하는 기능
+
+### 🎨 widgets
+
+- 재사용 가능한 복합 컴포넌트
+- 여러 기능이 조합된 UI 블록
+- 독립적으로 동작 가능한 UI 단위
+
+### 🔧 shared
+
+- 프로젝트 전반에 걸쳐 재사용되는 코드
+- 인프라 수준의 유틸리티
+- UI 기본 컴포넌트
 
 ## Getting Started
 
